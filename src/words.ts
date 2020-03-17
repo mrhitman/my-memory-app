@@ -191,13 +191,15 @@ export const words: Word[] = [
   },
   {
     index: 33,
-    text: "",
-    url: ""
+    text: "Хек",
+    url:
+      "https://fishmarket.com.ua/image/cache/ab56982f574b6c03800053103bad032b.jpg"
   },
   {
     index: 34,
-    text: "",
-    url: ""
+    text: "Кущя",
+    url:
+      "https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5d46880906cc4600b03e5176_5d468811fbe6e700adf3fad1/scale_1200"
   },
   {
     index: 35,
