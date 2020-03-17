@@ -1,15 +1,20 @@
+import chance from "chance";
+
 export interface Word {
   index: number;
   text: string;
   url: string;
 }
 
+export const getRandomWord = (min: number, max: number) => {
+  return chance().pick(words.slice(min - 1, max));
+};
+
 export const words: Word[] = [
   {
     index: 1,
     text: "Еж",
-    url:
-      "https://www.google.com/url?sa=i&url=http%3A%2F%2Fsigils.ru%2Fsigns%2Fezh.html&psig=AOvVaw2RPMvz_fcxt5RcKliAvDJr&ust=1584528338675000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCLjJlZmqoegCFQAAAAAdAAAAABAJ"
+    url: "http://sigils.ru/signs/img/ezh.jpg"
   },
   {
     index: 2,
@@ -145,7 +150,7 @@ export const words: Word[] = [
   },
   {
     index: 26,
-    text: "Душа",
+    text: "Душ",
     url:
       "https://moyavanna.com/wp-content/uploads/2016/09/71eUSQRYsVL._SL1000_.jpg"
   },
