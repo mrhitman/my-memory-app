@@ -3,8 +3,9 @@ import "./App.css";
 import { getRandomWord, Word } from "./words";
 
 const App: React.FC = () => {
+  const MAX = 40;
   const [min, setMin] = useState(1);
-  const [max, setMax] = useState(30);
+  const [max, setMax] = useState(MAX);
   const [word, setWord] = useState<Word>(getRandomWord(min, max));
   const [hidden, setHidden] = useState(true);
   const newWord = () => {
@@ -33,7 +34,7 @@ const App: React.FC = () => {
           max="30"
           onChange={e => {
             const value = +e.target.value;
-            setMax(isNaN(value) || value > 30 || value < min ? 30 : value);
+            setMax(isNaN(value) || value > MAX || value < min ? MAX : value);
           }}
         />
       </div>
