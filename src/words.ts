@@ -77,8 +77,7 @@ export const words: Word[] = [
   {
     index: 13,
     text: "Жук",
-    url:
-      "https://lh3.googleusercontent.com/proxy/xo1ChvUuVlZ8dO-MBi9wA5bKCqcyGK7yIG8vjkmA0P6loYzPrAowWrMiyxsEqUxEHxkxu-0ojHEosgRYwEJSk3uSgOmhA9HaOxoBY7lkmsoF"
+    url: "http://www.tepid.ru/animals-3/images/lucanus-cervus-2.jpg"
   },
   {
     index: 14,
@@ -113,7 +112,7 @@ export const words: Word[] = [
     index: 19,
     text: "Гора",
     url:
-      "https://lh3.googleusercontent.com/proxy/yBLAlCuBv2mEHtRXm8fWQzXTzIumaeC4KDQTgy_3-JUGIZVRQKifoGgwj56_lpSZwgFO7jh8gQLiUjO-Wz1JAQgx02xiKasiwo_D"
+      "https://karpaty.rocks/sites/default/files/styles/photo_object/public/photo/history/gora_malyy_gorgan_0.jpg?itok=CdpCmqID"
   },
   {
     index: 20,
