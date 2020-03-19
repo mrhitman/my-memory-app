@@ -21,6 +21,28 @@ export const List: React.FC<ListProps> = props => {
 
   return (
     <Fragment>
+      <button
+        disabled={word.trim().length === 0}
+        onClick={() => {
+          const newItems = [...items, word];
+          setItems(newItems);
+          localStorage.setItem("my-memory-list", JSON.stringify(newItems));
+          generateWord();
+        }}
+      >
+        add
+      </button>
+      <button onClick={generateWord}>random</button>
+      <button
+        onClick={() => {
+          setWord("");
+          setItems([]);
+          localStorage.setItem("my-memory-list", "[]");
+        }}
+      >
+        reset
+      </button>
+      <input value={word} onChange={e => setWord(e.target.value)} />
       <ol>
         {items.map(item => (
           <li
@@ -37,17 +59,6 @@ export const List: React.FC<ListProps> = props => {
           </li>
         ))}
       </ol>
-      <button
-        disabled={word.trim().length === 0}
-        onClick={() => {
-          setItems([...items, word]);
-          generateWord();
-        }}
-      >
-        add
-      </button>
-      <button onClick={generateWord}>random</button>
-      <input value={word} onChange={e => setWord(e.target.value)} />
     </Fragment>
   );
 };

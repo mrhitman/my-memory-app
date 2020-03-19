@@ -19,6 +19,9 @@ const App: React.FC = () => {
     setHidden(true);
   };
 
+  const data = localStorage.getItem("my-memory-list");
+  const list = data ? JSON.parse(data) : [];
+
   return (
     <div className="App">
       <div
@@ -63,7 +66,7 @@ const App: React.FC = () => {
           </div>
         </div>
         <div style={{ flexGrow: 1 }}>
-          <List items={[]} />
+          <List items={list} />
         </div>
       </div>
     </div>
