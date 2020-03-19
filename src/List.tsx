@@ -9,6 +9,16 @@ export const List: React.FC<ListProps> = props => {
   const [visible, setVisible] = useState<string[]>([]);
   const [word, setWord] = useState<string>("");
 
+  async function generateWord() {
+    const response = await fetch("https://my-memory-app.herokuapp.com/word");
+    const data = await response.json();
+    if (items.includes(data)) {
+      generateWord();
+      return;
+    }
+    setWord(data);
+  }
+
   return (
     <Fragment>
       <ol>
@@ -28,21 +38,15 @@ export const List: React.FC<ListProps> = props => {
         ))}
       </ol>
       <button
+        disabled={word.trim().length === 0}
         onClick={() => {
           setItems([...items, word]);
+          generateWord();
         }}
       >
         add
       </button>
-      <button
-        onClick={async () => {
-          const response = await fetch("http://localhost:3001/word");
-          const data = await response.json();
-          setWord(data);
-        }}
-      >
-        random
-      </button>
+      <button onClick={generateWord}>random</button>
       <input value={word} onChange={e => setWord(e.target.value)} />
     </Fragment>
   );

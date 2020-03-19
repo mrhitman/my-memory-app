@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { getRandomWord, Word } from "./words";
 import { List } from "./List";
@@ -9,6 +9,11 @@ const App: React.FC = () => {
   const [max, setMax] = useState(MAX);
   const [word, setWord] = useState<Word>(getRandomWord(min, max));
   const [hidden, setHidden] = useState(true);
+
+  useEffect(() => {
+    fetch("https://my-memory-app.herokuapp.com/word");
+  }, []);
+
   const newWord = () => {
     setWord(getRandomWord(min, max));
     setHidden(true);
@@ -46,20 +51,20 @@ const App: React.FC = () => {
               setMax(isNaN(value) || value > MAX || value < min ? MAX : value);
             }}
           />
+          <h1 style={{ fontSize: "8em" }} onClick={() => setHidden(false)}>
+            {word.index}
+          </h1>
+          <div
+            style={{ opacity: hidden ? 0.01 : 1 }}
+            onClick={() => setHidden(false)}
+          >
+            <h2>{word.text}</h2>
+            <img src={word.url} alt={word.text} width="500" height="500" />
+          </div>
         </div>
         <div style={{ flexGrow: 1 }}>
           <List items={[]} />
         </div>
-      </div>
-      <h1 style={{ fontSize: "8em" }} onClick={() => setHidden(false)}>
-        {word.index}
-      </h1>
-      <div
-        style={{ opacity: hidden ? 0.01 : 1 }}
-        onClick={() => setHidden(false)}
-      >
-        <h2>{word.text}</h2>
-        <img src={word.url} alt={word.text} width="500" height="500" />
       </div>
     </div>
   );
