@@ -4,8 +4,9 @@ import { getRandomWord, Word } from "./words";
 import { List } from "./List";
 
 const App: React.FC = () => {
+  const MIN = 1;
   const MAX = 40;
-  const [min, setMin] = useState(1);
+  const [min, setMin] = useState(MIN);
   const [max, setMax] = useState(MAX);
   const [word, setWord] = useState<Word>(getRandomWord(min, max));
   const [hidden, setHidden] = useState(true);
@@ -37,7 +38,7 @@ const App: React.FC = () => {
           <input
             type="number"
             value={min.toString()}
-            min="1"
+            min={MIN}
             max={(max - 1).toString()}
             onChange={e => {
               const value = +e.target.value;
@@ -48,7 +49,7 @@ const App: React.FC = () => {
             type="number"
             value={max.toString()}
             min={(min + 1).toString()}
-            max="30"
+            max={MAX}
             onChange={e => {
               const value = +e.target.value;
               setMax(isNaN(value) || value > MAX || value < min ? MAX : value);
