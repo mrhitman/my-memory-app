@@ -40,9 +40,13 @@ const App: React.FC = () => {
             value={min.toString()}
             min={MIN}
             max={(max - 1).toString()}
-            onChange={e => {
+            onBlur={e => {
               const value = +e.target.value;
               setMin(isNaN(value) || value < 1 || value > max ? 1 : value);
+            }}
+            onChange={e => {
+              const value = e.target.value;
+              setMin(+value);
             }}
           />
           <input

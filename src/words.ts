@@ -7,14 +7,14 @@ export interface Word {
 }
 
 export const getRandomWord = (min: number, max: number) => {
-  return chance().pick(words.slice(min - 1, max));
+  return chance().pick(words.slice(min < max ? min - 1 : 0, max || words.length));
 };
 
 export const words: Word[] = [
   {
     index: 1,
     text: "Еж",
-    url: "http://sigils.ru/signs/img/ezh.jpg"
+    url: "https://st4.depositphotos.com/4350129/23938/i/600/depositphotos_239381082-stock-photo-little-cartoon-hedgehog.jpg"
   },
   {
     index: 2,
@@ -163,7 +163,7 @@ export const words: Word[] = [
     index: 28,
     text: "Дева",
     url:
-      "https://знаки-зодиаков.рф/wp-content/uploads/2017/09/znak-zodiaka-deva-zhenshhina-risunok.jpg"
+      "https://prodetki.com/wp-content/uploads/2019/09/Deva-e1567340108841.jpg"
   },
   {
     index: 29,
