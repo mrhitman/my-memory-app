@@ -5,7 +5,7 @@ import { List } from "./List";
 
 const App: React.FC = () => {
   const MIN = 1;
-  const MAX = 40;
+  const MAX = 46;
   const [min, setMin] = useState(MIN);
   const [max, setMax] = useState(MAX);
   const [word, setWord] = useState<Word>(getRandomWord(min, max));
