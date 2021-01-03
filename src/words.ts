@@ -234,5 +234,55 @@ export const words: Word[] = [
     text: "Чума",
     url:
       "https://images11.popmeh.ru/upload/img_cache/f0e/f0e3d1efe75e2de5e155d09930e52659_ce_465x465x148x114_cropped_800x800.jpg"
-  }
+  },
+  {
+    index: 41,
+    text: "Очаг",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLAKcluP3akLvPZFZyJ-iKW8STRlXxVgz6g&usqp=CAU"
+  },
+  {
+    index: 42,
+    text: "Щит",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5I87nPogVnfG2_x5Wd4Q3kTeyISCHld1MqQ&usqp=CAU"
+  },
+  {
+    index: 43,
+    text: "Очки",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJGDSazWp2N4MkGOHufajrlStkA5sxakRh8g&usqp=CAU"
+  },
+  {
+    index: 44,
+    text: "Чаща",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl5erNH4zvFxXosdxiGxSOA2l-ybASBqdgzA&usqp=CAU"
+  },
+  {
+    index: 45,
+    text: "Чип",
+    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSauvHsL96JBeXvXunCP7je7F-ZsAzDpeLWxw&usqp=CAU"
+  },
+  {
+    index: 46,
+    text: "Чаша",
+    url: "https://www.graycell.ru/picture/small/chasha.jpg"
+  },
+  // {
+  //   index: 47,
+  //   text: "",
+  //   url: ""
+  // },
+  // {
+  //   index: 48,
+  //   text: "",
+  //   url: ""
+  // },
+  // {
+  //   index: 49,
+  //   text: "",
+  //   url: ""
+  // },
+  // {
+  //   index: 49,
+  //   text: "",
+  //   url: ""
+  // }
 ];
