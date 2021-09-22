@@ -7,7 +7,7 @@ export interface Word {
 }
 
 export const getRandomWord = (min: number, max: number) => {
-  return chance().pick(
+  return chance().pickone(
     words.slice(min < max ? min - 1 : 0, max || words.length)
   );
 };
@@ -176,8 +176,8 @@ export const words: Word[] = [
   },
   {
     index: 34,
-    text: "Кущя",
-    url: "https://avatars.mds.yandex.net/get-zen_doc/1040957/pub_5d46880906cc4600b03e5176_5d468811fbe6e700adf3fad1/scale_1200",
+    text: "Куча",
+    url: "kucha.jpg",
   },
   {
     index: 35,
@@ -186,8 +186,8 @@ export const words: Word[] = [
   },
   {
     index: 36,
-    text: "Укол",
-    url: "https://fb.ru/misc/i/thumb/a/3/2/0/7/5/7/4/3207574.jpg",
+    text: "Хала",
+    url: "hala.jpg",
   },
   {
     index: 37,
@@ -206,13 +206,13 @@ export const words: Word[] = [
   },
   {
     index: 40,
-    text: "Чума",
-    url: "https://images11.popmeh.ru/upload/img_cache/f0e/f0e3d1efe75e2de5e155d09930e52659_ce_465x465x148x114_cropped_800x800.jpg",
+    text: "Чум",
+    url: "chum.jpg",
   },
   {
     index: 41,
     text: "Очаг",
-    url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgLAKcluP3akLvPZFZyJ-iKW8STRlXxVgz6g&usqp=CAU",
+    url: "hearth.jpg",
   },
   {
     index: 42,
@@ -239,24 +239,29 @@ export const words: Word[] = [
     text: "Чаша",
     url: "bowl.jpg",
   },
-  // {
-  //   index: 47,
-  //   text: "",
-  //   url: ""
-  // },
-  // {
-  //   index: 48,
-  //   text: "",
-  //   url: ""
-  // },
-  // {
-  //   index: 49,
-  //   text: "",
-  //   url: ""
-  // },
-  // {
-  //   index: 49,
-  //   text: "",
-  //   url: ""
-  // }
+  {
+    index: 47,
+    text: "Часы",
+    url: "clock.jpg"
+  },
+  {
+    index: 48,
+    text: "Чуфа",
+    url: "chufa.jpg"
+  },
+  {
+    index: 49,
+    text: "Чары",
+    url: "magic.jpg"
+  },
+  {
+    index: 49,
+    text: "",
+    url: ""
+  },
+  {
+    index: 50,
+    text: "",
+    url: ""
+  }
 ];
