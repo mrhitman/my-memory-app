@@ -67,7 +67,7 @@ const App: React.FC = () => {
             onClick={() => setHidden(false)}
           >
             <h2>{word.text}</h2>
-            <img src={word.url} alt={word.text} width="500" height="500" />
+            <img src={`/static/${word.url}`} alt={word.text} width="500" height="500" />
           </div>
         </div>
         <div style={{ flexGrow: 1 }}>
